@@ -19,11 +19,13 @@ n3 = []
 n2 = []
 
 
+# path = input file path
 def read_file(path: str) -> list:
     with open(path, 'r') as file:
         return file.readlines()
 
 
+# line = line in text file read from above method
 def gen_kanji_list(line: str) -> list:
     output = []
     for char in line:
@@ -32,6 +34,7 @@ def gen_kanji_list(line: str) -> list:
     return output
 
 
+# path = input file path
 def gen_kanken_lists(path: str):
     global kanken7
     global kanken6
@@ -52,6 +55,7 @@ def gen_kanken_lists(path: str):
     kanken2 = gen_kanji_list(kanken[6])
 
 
+# path = input file path
 def gen_jlpt_lists(path: str):
     global n5
     global n4
